@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/results.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>CGSW | Results</title>
+    <script src="https://kit.fontawesome.com/22e7365634.js" crossorigin="anonymous"></script>
+</head>
+
+<header>
+    <nav class = 'navbar'>
+        <h1><b><a href = 'index.html#start_journey'>Canadian Guideline for Safe Wandering</a></b></h1>
+        <ul>
+            <li><a href = 'index.html#more_information'>More Information</a></li>
+            <li><a href = 'index.html#about'>About Us</a></li>
+            <li><a href = 'strategies.html'>Strategies</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div id = 'content'>
+        <div id = left>
+            <div id = 'full_slider'>
+                <div id = 'ticks'>
+                    <div class = 'tick_content' id = 'low_section'>
+                        <h3 class = 'tick_text' id = 'low_text'>Low</h3>
+                    </div>
+                    <div class = 'tick_content' id = 'medium_section'>
+                        <h3 class = 'tick_text' id = 'medium_text'>Medium</h3>
+                    </div>
+                    <div class = 'tick_content' id = 'high_section'>
+                        <h3 class = 'tick_text' id = 'high_text'>High</h3>
+                    </div>
+                </div>
+                <div id = 'slider'>
+                    <input id = 'risk_level' type = 'range' min = "1" max = "3" step = '1' list = 'tickmarks'>
+                    <div class = 'circle' id = 'low_circle'></div>
+                    <div class = 'circle' id = 'medium_circle'></div>
+                    <div class = 'circle' id = 'high_circle'></div>
+                </div>
+            </div>
+            <div id = 'text'>
+                <p id = 'slider_text'>Move the slider to see other risk levels</p>
+                <p id = "first_p">You are not alone. Many people living with dementia are at a medium risk. Below are some strategies you can try to reduce your risk of getting lost. It is better to have at least two strategies in place in case one fails.</p>
+                <p id = "second_p">Even though you are at this risk level right now, you can be at a greater or lesser level of risk at any moment. For example, one moment you know exactly where you are, and a few minutes later you suddenly are lost and disoriented. <b>Because of this, look at all three risk levels so that you can act quickly when your risk level does change.</b></p>
+                <p id = "third_p">Remember that your risk might change over time, so please consider revisiting this website in the future.</b></p>
+                <div id = "main_buttons">
+                    <button id = "strategies">See Strategies</button>
+                    <button id = "restart"><a href = "index.html">Restart Journey</a></button>
+                </div>
+            </div>
+        </div>
+        <img id = 'image' src="images/Results Picture.png">
+    </div>
+    <div id = 'strategy_popup'>
+        <div id = 'strategy-content'>
+            <div id = 'popup_header'>
+                <h5 id = 'popup_title'>Strategies for <span id = "risk_text">Medium Risk</span> of Getting Lost</h5>
+                <span id = 'close'>CLOSE</span>
+            </div>
+            <div id = 'popup_text'>
+                <div class = 'column' id = 'column_1'>
+                    <h3><img src = 'images/Technology Icon.png'>Technology</h3>
+                    <ul  id = 'technology_content'>
+                    </ul>
+                </div>
+                <div class = 'column' id = 'column_2'>
+                    <h3><img src = 'images/Family and Friends Icon.png'>Family and Friends</h3>
+                    <ul id = 'family_friends_content'>
+                    </ul>
+                </div>
+                <div class = 'column' id = 'column_3'>
+                    <h3><img src = 'images/Community Icon.png'>Community</h3>
+                    <ul id = 'community_content'>
+                    </ul>
+                </div>  
+            </div>    
+        </div>
+        <div id = 'popup_buttons'>
+            <button class = 'popup_button' id = 'download'><a id = 'download_link' href = 'assets/Test low.pdf' download = 'Your Personalized Wandering Strategy'><img src = "images/Download.png">Download</a></button>
+            <button class = 'popup_button' id = 'lost'>If You Are Lost</button>
+        </div>
+    </div>
+    <script src="js/results.js"></script>
+</body>
+</html>

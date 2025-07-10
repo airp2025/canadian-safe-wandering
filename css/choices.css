@@ -1,0 +1,371 @@
+* {
+  font-family: "Lato", sans-serif;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*Navigation Bar*/
+nav {
+  padding-top: 2%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  margin-left: 4%;
+  font-size: clamp(16px, 1.5vw, 30px);
+  color: #ff8500;
+  font-weight: bolder;
+}
+
+nav ul {
+  margin-right: 10%;
+  display: flex;
+  list-style: none;
+  font-weight: bold;
+}
+
+nav li {
+  font-size: clamp(16px, 1.5vw, 30px);
+  margin-right: 10%;
+}
+
+nav a {
+  color: #ff8500;
+  white-space: nowrap;
+}
+
+/*Question*/
+#content {
+  display: flex;
+  margin-top: 1%;
+}
+
+#question {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  height: 80vh;
+  margin-left: 4%;
+  width: 60%;
+  margin-top: 1%;
+}
+
+h3 {
+  font-size: clamp(16px, 2vw, 18px);
+  opacity: 75%;
+  font-weight: normal;
+  margin: 0;
+}
+
+h1 {
+  margin: 1% 0;
+  color: #869401;
+  font-size: clamp(15px, 3vw, 36px);
+  font-weight: 800;
+}
+
+/*Options*/
+button:hover {
+  cursor: pointer;
+}
+
+button[disabled]:hover {
+  cursor: auto;
+}
+
+#options {
+  margin-top: 2%;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.option {
+  display: flex;
+  margin-bottom: 2%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: #424242;
+  padding: 2% 8% 2% 2%;
+  text-align: left;
+  height: auto;
+  width: 100%;
+  outline: none;
+  font-size: clamp(18px, 1.5vw, 24px);
+  box-shadow: none;
+  border: 1px solid #c4c4c4;
+}
+
+.checkmark {
+  margin-right: -6%;
+  margin-left: 0 10px;
+  color: #848f17;
+}
+
+/*Navigation Buttons*/
+#navigation {
+  display: flex;
+  position: absolute;
+  bottom: 0%;
+  right: 0;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navigation_button {
+  height: clamp(40px, 3.2vw, 100px);
+  width: clamp(120px, 10vw, 300px);
+  font-size: clamp(20px, 1.5vw, 25px);
+  font-weight: bold;
+  text-align: center;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  color: #c4c4c4;
+  background-color: white;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.5s;
+}
+
+.navigation_button[disabled]:hover {
+  cursor: auto;
+}
+
+#next {
+  justify-self: right;
+  margin-left: 30px;
+}
+
+.navigation_button i {
+  color: #c4c4c4;
+  transition: all 0.25s;
+}
+
+#back_icon {
+  margin-right: clamp(10px, 1vw, 15px);
+}
+
+#next_icon {
+  margin-left: clamp(5px, 1vw, 15px);
+}
+
+/*Change navigation buttons to be static if height is small enough to prevent overlap*/
+@media (max-height: 620px) {
+  body {
+    margin-bottom: 10%;
+  }
+
+  #options {
+    height: auto;
+  }
+
+  #navigation {
+    margin-top: 10px;
+    position: static;
+    margin-right: 0%;
+  }
+}
+
+#advice {
+  margin: 0;
+  padding: 0% 3%;
+  background-color: #f0f2dd;
+}
+
+#advice p {
+  font-size: clamp(16px, 1.4vw, 24px);
+  line-height: clamp(20px, 2.3vw, 37px);
+}
+
+#first_paragraph {
+  margin-bottom: 1.5%;
+}
+
+#second_paragraph {
+  margin-top: 0%;
+}
+
+/*Progress bar*/
+#progress_bar {
+  display: grid;
+  grid-template-areas:
+    "blank number number"
+    "arrow_1 progress_1 question_1"
+    "arrow_2 progress_2 question_2"
+    "arrow_3 progress_3 question_3"
+    "arrow_4 progress_4 question_4"
+    "arrow_5 progress_5 question_5"
+    "arrow_6 progress_6 question_6";
+  grid-column-gap: 15px;
+  height: 75vh;
+  min-height: 360px;
+  align-items: center;
+  margin: 1% 0% 0% 4%;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: clamp(16px, 2.5vw, 26px);
+  color: #869401;
+  font-weight: bold;
+  grid-area: number;
+}
+
+#pointer {
+  color: #869401;
+  grid-area: arrow_1;
+}
+
+.progress_bar_rectangle {
+  height: clamp(40px, 4vw, 55px);
+  width: clamp(2px, 0.3vw, 5px);
+  background-color: #f0f2dd;
+  border-radius: 15px;
+}
+
+#progress_bar h4 {
+  font-size: clamp(15px, 1.5vw, 19px);
+  color: #b6b6b6;
+  font-weight: normal;
+  margin: 0;
+}
+
+#question_1_bar {
+  background-color: #848f17;
+  grid-area: progress_1;
+}
+
+#question_1 {
+  color: #848f17;
+  font-weight: 800;
+  grid-area: question_1;
+}
+
+#question_2_bar {
+  grid-area: progress_2;
+}
+
+#question_2 {
+  font-weight: bold;
+  grid-area: question_2;
+}
+
+#question_3_bar {
+  grid-area: progress_3;
+}
+
+#question_3 {
+  grid-area: question_3;
+}
+
+#question_4_bar {
+  grid-area: progress_4;
+}
+
+#question_4 {
+  grid-area: question_4;
+}
+
+#question_5_bar {
+  grid-area: progress_5;
+}
+
+#question_5 {
+  grid-area: question_5;
+}
+
+#question_6_bar {
+  grid-area: progress_6;
+}
+
+#question_6 {
+  grid-area: question_6;
+}
+
+/*Change layout if orientation is portrait on mobile*/
+@media (orientation: portrait) {
+  nav {
+    padding-top: 5%;
+  }
+  
+  nav h1 {
+    font-size: clamp(18px, 1.5vw, 30px);
+  }
+
+  #content {
+    display: flex;
+    margin-top: 7%;
+  }
+
+  #question {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    height: 80vh;
+    margin-left: 5%;
+    width: 100%;
+    margin-top: 0.5%;
+  }
+
+  h3 {
+    font-size: clamp(16px, 2vw, 18px);
+    opacity: 75%;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  h1 {
+    margin: 1% 0;
+    font-size: clamp(30px, 3vw, 36px);
+    width: 95%;
+  }
+
+  #options {
+    margin-top: 5%;
+    height: auto;
+    width: 90%;
+  }
+
+  .option {
+    padding: 4% 8% 4% 4%;
+    width: 100%;
+    font-size: clamp(20px, 1.5vw, 24px);
+  }
+
+  #navigation {
+    margin-top: 10%;
+    margin-right: 10%;
+    position: static;
+  }
+
+  .navigation_button {
+    height: clamp(40px, 3.2vw, 100px);
+    width: clamp(140px, 10vw, 300px);
+    font-size: clamp(20px, 1.5vw, 25px);
+  }
+
+  #advice {
+    margin-top: 5%;
+    padding: 3% 5%;
+    background-color: #f0f2dd;
+    font-size: clamp(20px, 1.5vw, 24px);
+    line-height: clamp(30px, 2.5vw, 37px);
+  }
+}
